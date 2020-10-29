@@ -20,3 +20,7 @@ main {
   background: url('./assets/bg-stars-sky.jpg') center center no-repeat;
   background-size: cover;
 }
+
+.paddingTop {
+  padding-top: 25px;
+}
