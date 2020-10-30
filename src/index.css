@@ -24,3 +24,7 @@ main {
 .paddingTop {
   padding-top: 25px;
 }
+
+.error {
+  color: white;
+}
