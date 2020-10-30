@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-// import Loader from '../components/Loader';
 
 export const useHttp = () => {
   const [loading, setLoading] = useState(false);
@@ -13,10 +12,12 @@ export const useHttp = () => {
           body = JSON.stringify(body);
           headers['Content-Type'] = 'application/json';
         }
+        const newCors = 'https';
+        const newArray = url.split(":")[1];
+        const newUrl = `${newCors}:${newArray}`;
+        const response = await fetch(newUrl, { method, body, headers });
 
-        const response = await fetch(url, { method, body, headers });
         const data = await response.json();
-
         if (!response.ok) {
           setLoading(false);
           setError(true);

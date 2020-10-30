@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import Residents from './Residents'
 
 const PlanetDescription = ({planet: {name, rotation_period, diameter, climate, gravity, terrain, population, residents}}) => {
+  const populationNum = (+population).toLocaleString('ru');
+  console.log(typeof(population));
+  console.log(typeof(populationNum));
   return (
     <div className="row">
       <div className="col s12">
@@ -16,7 +19,7 @@ const PlanetDescription = ({planet: {name, rotation_period, diameter, climate, g
             <div><strong>Сlimate - </strong>{climate}</div>
             <div><strong>Gravity - </strong>{gravity}</div>
             <div><strong>Terrain - </strong>{terrain}</div>
-            <div><strong>population - </strong>{population}</div>
+            <div><strong>population - </strong>{populationNum}</div>
             <div>
               <h5>Famous residents:</h5>
               {residents && residents.map(resident => <Residents key={resident} residentUrl={resident}/>)}

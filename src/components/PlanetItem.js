@@ -8,7 +8,7 @@ const PlanetItem = ({planet}) => {
 
   return (
     <Link to={`/planets/${planetId}`}>
-      <div className="card">
+      <div className="card large">
         <div className="card-image">
           <img alt="planetImg" src={planetImg}/>
           <span className="card-title">{planet.name}</span>
