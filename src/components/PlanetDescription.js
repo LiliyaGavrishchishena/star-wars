@@ -20,7 +20,7 @@ const PlanetDescription = ({planet: {name, rotation_period, diameter, climate, g
             <div><strong>population - </strong>{population !== "unknown" ? Number(population).toLocaleString('en') : 'No'  } residents</div>
             <div>
               <h5>Famous residents:</h5>
-              {residents && residents.map(resident => <Residents key={resident} residentUrl={resident}/>)}
+              {Array.isArray(residents) && residents.length !== 0 ? residents.map(resident => <Residents key={resident} residentUrl={resident}/>): 'You could be here!'}
             </div>
           </div>
         </div>
