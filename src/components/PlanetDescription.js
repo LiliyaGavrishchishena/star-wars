@@ -8,13 +8,14 @@ const PlanetDescription = ({planet: {name, rotation_period, diameter, climate, g
       <div className="col s12">
         <div className="card horizontal">
           <div className="card-content">
+
             <h4>Detailed Information about {name}</h4>
-            <div>Rotation Period - {rotation_period}</div>
-            <div>diameter - {diameter}</div>
-            <div>Сlimate - {climate}</div>
-            <div>Gravity - {gravity}</div>
-            <div>Terrain - {terrain}</div>
-            <div>population - {population}</div>
+            <div><strong>Rotation Period - </strong>{rotation_period}</div>
+            <div><strong>diameter - </strong>{diameter}</div>
+            <div><strong>Сlimate - </strong>{climate}</div>
+            <div><strong>Gravity - </strong>{gravity}</div>
+            <div><strong>Terrain - </strong>{terrain}</div>
+            <div><strong>population - </strong>{population}</div>
             <div>
               <h5>Famous residents:</h5>
               {residents && residents.map(resident => <Residents key={resident} residentUrl={resident}/>)}

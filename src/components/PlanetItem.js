@@ -14,8 +14,8 @@ const PlanetItem = ({planet}) => {
           <span className="card-title">{planet.name}</span>
         </div>
         <div className="card-content">
-          <div>Climate - {planet.climate}</div>
-          <div>Population: {planet.population}</div>
+          <div><strong>Climate - </strong>{planet.climate}</div>
+          <div><strong>Population: </strong>{planet.population}</div>
         </div>
       </div>
     </Link>
