@@ -15,7 +15,7 @@ const PlanetItem = ({planet}) => {
         </div>
         <div className="card-content">
           <div><strong>Climate - </strong>{planet.climate}</div>
-          <div><strong>Population: </strong>{planet.population}</div>
+          <div><strong>Population: </strong>{planet.population !== "unknown" ? Number(planet.population).toLocaleString('en') : 'No'} residents</div>
         </div>
       </div>
     </Link>

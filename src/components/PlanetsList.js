@@ -6,7 +6,7 @@ const PlanetsList = ({planets}) => {
   return (
     <div className="row">
       {planets.map(planet => (
-        <div className="col s12 m6 l4 xl3" key={planet.name}>
+        <div className="col s12 m4" key={planet.name}>
           <PlanetItem planet={planet}/>
         </div>
       ))}
