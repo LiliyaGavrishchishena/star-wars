@@ -1,6 +1,9 @@
 {
   "name": "star-wars",
-  "homepage": "http://LiliyaGavrishchishena.github.io/star-wars",
+  "homepage": "http://LiliyaGavrishchishena.github.io/star-wars/",
+  "repository": "https://github.com/LiliyaGavrishchishena/star-wars.git",
+  "author": "liliya.gavrishchishena@gmail.com",
+  "description": "React",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
