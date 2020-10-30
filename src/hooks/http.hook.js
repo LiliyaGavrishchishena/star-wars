@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+// import Loader from '../components/Loader';
 
 export const useHttp = () => {
   const [loading, setLoading] = useState(false);

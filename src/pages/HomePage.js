@@ -2,13 +2,14 @@ import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import PlanetsList from '../components/PlanetsList';
 import Navigation from '../components/Navigation';
+import Loader from '../components/Loader';
 
 import { useHttp } from '../hooks/http.hook';
 
 const HomePage = () => {
   const [planets, setPlanets] = useState([]);
   const [navigation, setNavigation] = useState({prevUrl: null, nextUrl:null})
-  const { request } = useHttp();
+  const { loading, request } = useHttp();
 
   const fetchPlanets = useCallback(async (page='https://swapi.dev/api/planets/?page=1') => {
 
@@ -25,15 +26,18 @@ const HomePage = () => {
     fetchPlanets();
   }, [fetchPlanets]);
 
-  return (
-    <div className="container">
+  if (loading) {
+    return <Loader />;
+  }
 
-      <div className="paddingTop">
-        <Navigation navigation={navigation} fetchPlanets={fetchPlanets}/>
-        <PlanetsList planets={planets}/>
-      </div>
-    </div>
-  )
+  return <>
+  {!loading && <div className="container">
+        <div className="paddingTop">
+         <Navigation navigation={navigation} fetchPlanets={fetchPlanets}/>
+           <PlanetsList planets={planets}/>
+        </div>
+     </div>}
+  </>
 };
 
 HomePage.propTypes = {
@@ -43,4 +47,3 @@ HomePage.propTypes = {
 };
 
 export default HomePage;
-
