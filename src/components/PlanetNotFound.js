@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const PlanetNotFound = ({error}) => {
   return (
@@ -17,6 +18,11 @@ const PlanetNotFound = ({error}) => {
       </div>
     </div>
   )
+};
+
+PlanetNotFound.propTypes = {
+  error: PropTypes.bool,
+
 };
 
 export default PlanetNotFound;

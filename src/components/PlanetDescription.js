@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Residents from './Residents'
 
@@ -27,5 +28,16 @@ const PlanetDescription = ({planet: {name, rotation_period, diameter, climate, g
 
   )
 };
+
+PlanetDescription.propTypes = {
+  name:PropTypes.string,
+  rotation_period:PropTypes.string,
+  diameter:PropTypes.string,
+  climate:PropTypes.string,
+  gravity:PropTypes.string,
+  terrain:PropTypes.string,
+  population:PropTypes.string,
+  residents:PropTypes.array,
+}
 
 export default PlanetDescription;

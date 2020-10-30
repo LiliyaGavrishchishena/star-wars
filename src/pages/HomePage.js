@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-
+import PropTypes from 'prop-types';
 import PlanetsList from '../components/PlanetsList';
 import Navigation from '../components/Navigation';
 
@@ -36,4 +36,11 @@ const HomePage = () => {
   )
 };
 
+HomePage.propTypes = {
+  navigation:PropTypes.string,
+  fetchPlanets:PropTypes.func,
+  planets:PropTypes.array,
+};
+
 export default HomePage;
+

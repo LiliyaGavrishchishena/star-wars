@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useHttp } from '../hooks/http.hook';
+import PropTypes from 'prop-types';
 
 import PlanetNotFound from '../components/PlanetNotFound';
 import PlanetDescription from '../components/PlanetDescription'
@@ -31,6 +32,11 @@ const PlanetPage = () => {
       {!error && <PlanetDescription planet={planet}/>}
     </div>
   )
+};
+
+PlanetPage.propTypes = {
+  error: PropTypes.bool,
+  planet:PropTypes.object,
 };
 
 export default PlanetPage;

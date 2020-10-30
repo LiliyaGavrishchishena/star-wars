@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Navigation = ({navigation, fetchPlanets}) => {
   return (
@@ -8,5 +9,10 @@ const Navigation = ({navigation, fetchPlanets}) => {
    </div>
   )
 };
+
+Navigation.propTypes = {
+  navigation:PropTypes.object,
+  fetchPlanets:PropTypes.func,
+}
 
 export default Navigation;

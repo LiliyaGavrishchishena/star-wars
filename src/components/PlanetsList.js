@@ -1,5 +1,6 @@
 import React from 'react';
 import PlanetItem from './PlanetItem'
+import PropTypes from 'prop-types';
 
 const PlanetsList = ({planets}) => {
   return (
@@ -13,4 +14,7 @@ const PlanetsList = ({planets}) => {
   )
 };
 
+PlanetsList.propTypes = {
+  planets:PropTypes.array,
+}
 export default PlanetsList;

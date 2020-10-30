@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 import planetImg from '../assets/planet.jpg'
 
 const PlanetItem = ({planet}) => {
@@ -21,5 +21,10 @@ const PlanetItem = ({planet}) => {
     </Link>
   )
 };
+
+PlanetItem.propTypes = {
+  planet:PropTypes.object,
+
+}
 
 export default PlanetItem;
