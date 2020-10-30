@@ -3,7 +3,6 @@ import React from 'react';
 import Residents from './Residents'
 
 const PlanetDescription = ({planet: {name, rotation_period, diameter, climate, gravity, terrain, population, residents}}) => {
-
   return (
     <div className="row">
       <div className="col s12">
@@ -17,10 +16,9 @@ const PlanetDescription = ({planet: {name, rotation_period, diameter, climate, g
             <div>Terrain - {terrain}</div>
             <div>population - {population}</div>
             <div>
-              <h5>Residents:</h5>
+              <h5>Famous residents:</h5>
               {residents && residents.map(resident => <Residents key={resident} residentUrl={resident}/>)}
-              </div>
-
+            </div>
           </div>
         </div>
       </div>

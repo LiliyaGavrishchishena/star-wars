@@ -28,3 +28,8 @@ main {
 .error {
   color: white;
 }
+
+.navigation {
+  text-align: center;
+  margin-bottom: 10px;
+}
